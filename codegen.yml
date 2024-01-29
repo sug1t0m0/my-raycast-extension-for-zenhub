@@ -1,0 +1,12 @@
+overwrite: true
+schema: 'zhGraphql.graphql'
+documents:
+  - './src/**/*.graphql'
+  - './src/**/*.ts'
+  - './src/**/*.tsx'
+generates:
+  src/__generated__/zhGraphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-graphql-request'

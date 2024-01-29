@@ -1,0 +1,77 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "sample",
+  "title": "sample",
+  "description": "",
+  "icon": "command-icon.png",
+  "author": "sug1t0m0_dev",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Show Pipelines",
+      "description": "Template for showing a static list and a detail view",
+      "mode": "view"
+    },
+    {
+      "name": "show-issues",
+      "title": "Show Issues",
+      "description": "issues",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "zenhubGraphqlPersonalApiKey",
+      "type": "password",
+      "required": true,
+      "title": "Zenhub GraphQL Personal API Key",
+      "description": "Create a Zenhub GraphQL Personal API Key"
+    },
+    {
+      "name": "zenhubWorkspaceId",
+      "type": "textfield",
+      "required": true,
+      "title": "Zenhub Workspace Id",
+      "description": "Create a Zenhub Workspace Id"
+    },
+    {
+      "name": "sprintBacklogPipelineName",
+      "type": "textfield",
+      "required": true,
+      "title": "Sprint Backlog Pipeline Name",
+      "description": "Create a Sprint Backlog Pipeline Name"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.64.4",
+    "@raycast/utils": "^1.10.1",
+    "cross-fetch": "^4.0.0",
+    "graphql": "^16.8.1",
+    "urql": "^4.0.6"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-graphql-request": "^6.1.0",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/jest": "^29.5.11",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "ray": "ray",
+    "publish": "npx @raycast/api@latest publish",
+    "codegen:graphql": "graphql-codegen --config codegen.yml"
+  }
+}
